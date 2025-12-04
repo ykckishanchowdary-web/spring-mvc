@@ -27,4 +27,10 @@ public class PieController {
         return Map.of("productId",String.valueOf(id),"sort",sortInfo);
     }
 
+    @PostMapping("/products")
+    public Map<String,Object> addProduct(@RequestBody Map<String,Object> newProduct){
+        System.out.println(newProduct);
+        return newProduct;
+    }
+
 }
