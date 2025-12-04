@@ -11,3 +11,45 @@ Query Paramters customize our responses  , used for filtering, searching, pagina
 @RequestBody binds incoming JSON to a Java object or Map
 ideal for creating new resources
 
+
+@PutMapping handles updates
+Combines @PathVariable to Identify the resource
+@RequestBody for the new data
+
+
+@DeleteMapping handles deletion
+Typically returns a simple message or  return Http 204 no content
+
+
+201 Created -> After successful POST
+200 OK -> for successful GET,PUT
+204 no Content -> After Delete
+Customize with ResponseEntity for more Control
+
+
+Consuming a REST API with REST TEMPLATE
+getForObject() sends an HTTP GET Request
+Automatically parses the Json Response in to a Java Map
+Returns it directly to the client
+
+
+Building and Running the App as a JAR
+mvn clean package
+java -jar target/demo-0.0.1-SNAPSHOT.jar
+
+
+
+java -version
+which mvn -> to know where mvn is installed
+mvn -version -> to know the version
+
+
+Deployment OPtions - > cloud Providers
+AWS ElasticBeanStalk, Azure App Service,Google Cloud Run
+
+container: Docker,any Orchestration(ECS or EKS,Kubernetes)
+
+Bare Metal/Vm run:  Run Java -jar directly.
+
+
+
